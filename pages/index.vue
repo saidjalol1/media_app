@@ -1,0 +1,58 @@
+<script setup>
+import { ref } from "vue"
+
+const left_menu = ref(false)
+
+const post = {
+    "id":1,
+    "title":"Example in a Real Case (Blog Post Snippet):",
+    "category":{
+        "name":"Technology"
+    },
+    "body":"In Nuxt.js (or Vue), you can limit the number of characters displayed in a string by using JavaScript within the template. You can create a simple method or computed property to truncate a string to a specified length and append ellipsis (...) if necessary.In Nuxt.js (or Vue), you can limit the number of characters displayed in a string by using JavaScript within the template. You can create a simple method or computed property to truncate a string to a specified length and append ellipsis (...) if necessary."
+}
+const mobile_search_open = () =>{
+    left_menu.value = !left_menu.value
+
+    if (left_menu.value) {
+        document.body.classList.add('no-scroll');
+    } else {
+        document.body.classList.remove('no-scroll');
+    }
+}
+</script>
+<template>
+    <div class="wrapper px-4 pt-4">
+        <Menu @click="mobile_search_open" />
+    </div>
+    <div class="wrapper flex flex-col-reverse lg:flex-row pt-4 gap-x-4 gap-y-4 px-4">
+        <div class="posts">
+            <Post :post="post"/>
+            <Post :post="post"/>
+            <Post :post="post"/>
+            <Post :post="post"/>
+        </div>
+        <div class="additional">
+            <h1 class="font-bold text-2xl mt-2">Latest Post</h1>
+            <LatestPosts :post="post"/>
+            <NewsLetter />
+        </div>
+    </div>
+    <LeftMenu v-if="left_menu" @closeMenuEvent="mobile_search_open"/>
+</template>
+<style scoped>
+.no-scroll {
+    overflow: hidden; 
+    height: 100%;
+}
+@media screen and ( max-width: 640px){
+    .posts{
+        margin: 0 auto;
+    }
+}
+@media screen and ( max-width: 1024){
+    .wrapper{
+        flex-direction: column;
+    }
+}
+</style>

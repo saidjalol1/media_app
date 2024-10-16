@@ -19,8 +19,8 @@ const gotoPage = (page) => {
                         </svg>
                     </div>
                 </div>
-                <div class="text-gray-800 text-xl">
-                    Daily new articles in theme of science , Technology , Prodgramming and posts for english learners
+                <div class="text-gray-800 text-sm">
+                    Daily new articles in theme of science,Technology,Prodgramming and posts for english learners
                 </div>
             </div>
         </div>

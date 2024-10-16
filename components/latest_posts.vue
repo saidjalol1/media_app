@@ -22,7 +22,7 @@ const gotoPage = (page) => {
                 <img src="../public/download (1).jfif" alt="">
             </div>
             <div class="post_text">
-                <div class="category text-yellow-500">{{  post.category?.name }}</div>
+                <div class="category text-yellow-600">{{  post.category?.name }}</div>
                 <h1 class="font-bold text-xl mt-2">{{ post.title }}</h1>
                 <p class="post-body lg:block md:block sm:block hidden text-sm text-gray-800 mt-2 md:text-sm lg:text-sm">{{ truncateText(postbody, 100) }}</p>
             </div>

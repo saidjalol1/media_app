@@ -37,17 +37,17 @@ onUnmounted(() => {
 <template>
     <header class="flex justify-start items-center shrink-0">
         <div class="header-container flex justify-between items-center">
-            <div class="logo text-2xl font-bold text-black"><span class="text-yellow-500">Me</span>dia</div>
+            <div class="logo text-2xl font-bold text-black"><span class="text-yellow-700">Me</span>dia</div>
             <div v-if="desktop" class="search rounded-lg shadow hover:shadow-md bg-white px-2 flex items-center">
                 <input  class="px-2 py-2 outline-none text-black rounded-lg" type="text" placeholder="Search posts">
-                <button type="button px-2 py-4">
+                <button aria-label="search" type="button px-2 py-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                     </svg>
                 </button>
             </div>
             <div v-else class="search rounded-lg shadow hover:shadow-md bg-white px-3 py-3 flex items-center">
-                <button @click="mobile_search_open('open')" type="button px-2 py-4">
+                <button @click="mobile_search_open('open')" aria-label="search_open" type="button px-2 py-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                     </svg>

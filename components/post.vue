@@ -19,10 +19,10 @@ const gotoPage = (page) => {
     <div @click="gotoPage(post.id)" class="post px-4 pb-4 bg-white shadow rounded-lg hover:shadow-lg mt-4">
         <div class="flex flex-col sm:flex-row md:flex-row lg:flex-row gap-x-3 items-center gap-y-2">
             <div class="image mt-4">
-                <img src="../public/download (1).jfif" alt="">
+                <img width="100%" height="100%" src="../public/download (1).jfif" alt="">
             </div>
             <div class="post_text">
-                <div class="category text-yellow-500">{{  post.category?.name }}</div>
+                <div class="category text-yellow-600">{{  post.category?.name }}</div>
                 <h1 class="font-bold text-xl mt-2">{{ post.title }}</h1>
                 <p class="post-body lg:block md:block sm:block hidden text-sm text-gray-800 mt-2 md:text-sm lg:text-sm">{{ truncateText(postbody, 100) }}</p>
             </div>
@@ -54,10 +54,6 @@ const gotoPage = (page) => {
 .image{
     min-width: 250px;
     min-height: 100px;
-}
-img{
-    width: 100%;
-    height: 100%;
 }
 @media screen and ( max-width: 640px){
     .image{

@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue"
+import { useHead } from '#imports'
 
 const left_menu = ref(false)
 
@@ -20,6 +21,15 @@ const mobile_search_open = () =>{
         document.body.style.overflow = 'auto';
     }
 }
+useHead({
+  title: 'My Page Title',
+  htmlAttrs: {
+    lang: 'en'
+  },
+  meta: [
+    { name: 'description', content: "Explore the fascinating world of innovation and science. Our blog delivers in-depth articles on programming, cutting-edge technology, and the mysteries of physics, making complex topics accessible to learners and professionals alike. Whether you're a developer, tech enthusiast, or science lover, find insightful tutorials, analyses, and thought-provoking discussions to fuel your curiosity and enhance your knowledge." }
+  ]
+})
 </script>
 <template>
     <div class="wrapper px-4 pt-4">

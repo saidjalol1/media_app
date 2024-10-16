@@ -6,12 +6,15 @@ const search_menu = ref(false)
 
 const mobile_search_open = (choice) =>{
     if (choice === "open" && desktop.value === false){
-        search_menu.value = !search_menu.value
+        search_menu.value = true
+        document.body.style.overflow = 'hidden';
     }else if (choice === "close" && desktop.value === false){
         search_menu.value = false
+        document.body.style.overflow = 'auto';
     }else{
         console.log("There is problem opening the mobile menu");
     }
+    
 }
 
 const updateWindowSize = () => {
@@ -32,7 +35,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-    <header class="flex justify-start items-center">
+    <header class="flex justify-start items-center shrink-0">
         <div class="header-container flex justify-between items-center">
             <div class="logo text-2xl font-bold text-black"><span class="text-yellow-500">Me</span>dia</div>
             <div v-if="desktop" class="search rounded-lg shadow hover:shadow-md bg-white px-2 flex items-center">

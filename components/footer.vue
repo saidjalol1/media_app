@@ -7,7 +7,7 @@ const gotoPage = (page) => {
 }
 </script>
 <template>
-    <footer class="bg-white shadow-lg mt-10 py-10 px-10">
+    <footer class="bg-white shadow-lg mt-10 py-10 px-10 rounded-lg">
         <div class="wrapper">
             <div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-y-5">
                 <div>
@@ -26,5 +26,3 @@ const gotoPage = (page) => {
         </div>
     </footer>
 </template>
-<style scoped>
-</style>

@@ -15,9 +15,9 @@ const mobile_search_open = () =>{
     left_menu.value = !left_menu.value
 
     if (left_menu.value) {
-        document.body.classList.add('no-scroll');
+        document.body.style.overflow = 'hidden';
     } else {
-        document.body.classList.remove('no-scroll');
+        document.body.style.overflow = 'auto';
     }
 }
 </script>
@@ -39,11 +39,12 @@ const mobile_search_open = () =>{
         </div>
     </div>
     <LeftMenu v-if="left_menu" @closeMenuEvent="mobile_search_open"/>
+    <Footer />
 </template>
 <style scoped>
-.no-scroll {
-    overflow: hidden; 
-    height: 100%;
+.wrapperr{
+    max-width: 1200px;
+    margin: 0 auto;
 }
 @media screen and ( max-width: 640px){
     .posts{

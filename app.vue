@@ -4,6 +4,7 @@
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-    <Footer />
   </div>
 </template>
+<style scoped>
+</style>

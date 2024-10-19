@@ -14,7 +14,10 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/css/main.css'],
-
+  modules: ['nuxt-tiptap-editor'],
+  tiptap: {
+    prefix: 'Tiptap', //prefix for Tiptap imports, composables not included
+  },
   
   // router: {
   //   middleware: ['auth']

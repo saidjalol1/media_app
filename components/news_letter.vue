@@ -18,8 +18,8 @@
             </div>
         </div>
         <div  class="flex justify-between  shadow shadow-yellow-500 rounded-lg mt-4">
-            <input type="text" placeholder="Email" class="px-2 py-2 rounded-lg outline-none">
-            <button class="text-yellow-600 shadow h-1/1 px-2 hover:shadow-lg rounded-lg">subscribe</button>
+            <input type="text" placeholder="Email" class="text-xs lg:text-md md:text-md px-2 py-2 rounded-lg outline-none">
+            <button class="text-yellow-600 shadow h-1/1 px-2 lg:text-md md:text-md text-xs hover:shadow-lg rounded-lg">subscribe</button>
         </div>
     </div>
 </template>

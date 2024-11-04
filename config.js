@@ -1,3 +1,3 @@
 export const config = {
-    baseUrl: 'http://127.0.0.1:8000',
+    baseUrl: 'http://34.46.64.34:8000/',
   };
